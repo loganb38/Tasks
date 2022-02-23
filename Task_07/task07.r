@@ -1,5 +1,5 @@
 setwd("~/Desktop/Evolution/Tasks/Task_07")
-#I collaborated with Rebecca LaRochelle and others for parts of this assignment, mainly just through discussion about it.
+#I collaborated with Rebecca LaRochelle and others for parts of this assignment, mainly through discussion about it.
 #I also used the information found at this link (https://github.com/ropensci/paleobioDB/blob/master/README.md) on GitHub for assistance in installing, navigating, and reading the paleobioDB data.
 install.packages("paleobioDB")
 library(paleobioDB)
