@@ -38,3 +38,5 @@ plot(EData, breaksmethod="jenks")
 Trait <- ProjectData[,3]
 names(Trait) <- ProjectData[,1]
 STRAPPoutput <- traitDependentBAMM(EData, Trait, 100)
+#UPDATED HYPOTHESIS 24 MAR 2022: There is no correlation between body mass and diversification rate in the bird species recorded.
+#NOTE: I still need to edit my graphs to look better and more professional (add titles, add legends/key, change axes titles, etc.). This will be done by the submission deadline in April.
