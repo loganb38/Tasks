@@ -6,7 +6,7 @@ head(ProjectData)
 Model <- lm(ProjectData$DR~ProjectData$BodySize)
 
 par(las=1, mar=c(4,5,1,1))
-plot(ProjectData$BodySize, ProjectData$DR, pch=16, log="xy")
+plot(ProjectData$BodySize, ProjectData$DR, pch=16, log="xy", xlab="Log of Body Mass (g)", ylab="Log of DR", main="Relationship Between Bird Species' Body Mass and DR")
 abline(Model)
 summary(Model)
 plot(ProjectData$BodySize, ProjectData$HabitatBreadth, pch=16)
@@ -33,10 +33,13 @@ dummyEData <- data.frame(generation=c(0,rep(0, nrow(ProjectData))), leftchild=c(
 EData <- getEventData(tree, dummyEData, burnin=0)
 
 plot(EData, breaksmethod="jenks")
+##NEED TO ADD LEGEND TO INDICATE WHICH COLORS ARE HIGHER DR. 
+##ARE BETTER COLORS POSSIBLE?
 #################
 
 Trait <- ProjectData[,3]
 names(Trait) <- ProjectData[,1]
 STRAPPoutput <- traitDependentBAMM(EData, Trait, 100)
+STRAPPoutput
 #UPDATED HYPOTHESIS 24 MAR 2022: There is no correlation between body mass and diversification rate in the bird species recorded.
 #NOTE: I still need to edit my graphs to look better and more professional (add titles, add legends/key, change axes titles, etc.). This will be done by the submission deadline in April.
